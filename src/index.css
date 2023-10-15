@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles */
+.gradient-background {
+  background: linear-gradient(
+    90deg,
+    rgba(8, 103, 117, 0) 0%,
+    #002328 9.12%,
+    #002328 85.41%,
+    rgba(8, 103, 117, 0) 100%
+  );
+}
+
+.text-justify-last {
+  text-align: justify;
+  text-align-last: left;
+}
+
+.active {
+  background: #c1f6ed;
+  color: black;
+  stroke: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .HeaderTitle {
+    gap: 15px;
+    bottom: 13%;
+    left: 5%;
+  }
+  .HeaderTitle h2 {
+    font-size: 4rem;
+  }
+  .HeaderTitle span {
+    font-size: 1rem;
+  }
+  .headerCharacter {
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .HeaderTitle {
+    gap: 0;
+  }
+  .HeaderTitle h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+  .HeaderTitle h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 439px) {
+  .headerCharacter {
+    bottom: -40px;
+  }
+}
+
+@media only screen and (max-width: 386px) {
+  .headerCharacter {
+    bottom: -70px;
+  }
+  .HeaderTitle {
+    bottom: 20%;
+  }
+  .HeaderTitle h2 {
+    font-size: 1.3rem;
+  }
+  .HeaderTitle span {
+    font-size: 0.6rem;
+  }
+}
