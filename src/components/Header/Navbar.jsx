@@ -10,21 +10,53 @@ import {
 
 export default function Navbar() {
   const [isMenuShow, setIsMenuShow] = useState(false);
-  const [isScrolling, setIsScrolling] = useState(false);
+
+  const [homePosition, setHomePosition] = useState(0);
+  const [aboutPosition, setAboutPosition] = useState(0);
+  const [educationPosition, setEducationPosition] = useState(0);
+  const [skillsPosition, setSkillsPosition] = useState(0);
+  const [experiencePosition, setExperiencePosition] = useState(0);
+  const [ProjectsPosition, setProjectsPosition] = useState(0);
+
+  const scrollIntoSection = (num) => {
+    window.scrollTo({
+      behavior: "smooth",
+      top: num,
+    });
+  };
+
+  const getItemsPosition = () => {
+    const homescroll = document.querySelector("#Home")?.getBoundingClientRect();
+    setHomePosition(homescroll.top);
+
+    const aboutscroll = document
+      .querySelector("#About")
+      ?.getBoundingClientRect();
+    setAboutPosition(aboutscroll.top);
+
+    const educationscroll = document
+      .querySelector("#Education")
+      ?.getBoundingClientRect();
+    setEducationPosition(educationscroll.top);
+    const skillsscroll = document
+      .querySelector("#Skills")
+      ?.getBoundingClientRect();
+    setSkillsPosition(skillsscroll.top);
+
+    const experienceScroll = document
+      .querySelector("#Experience")
+      ?.getBoundingClientRect();
+    setExperiencePosition(experienceScroll.top + 100);
+
+    const projectsScroll = document
+      .querySelector("#Projects")
+      ?.getBoundingClientRect();
+    setProjectsPosition(projectsScroll.top + 200);
+  };
 
   useEffect(() => {
-    const fixScroll = () => {
-      window.scrollY > 20 ? setIsScrolling(true) : setIsScrolling(false);
-    };
-
-    window.addEventListener("scroll", fixScroll);
-
-    return () => {
-      window.removeEventListener("scroll", fixScroll);
-    };
+    getItemsPosition();
   }, []);
-
-  console.log(isScrolling);
 
   return (
     <div
@@ -44,12 +76,29 @@ export default function Navbar() {
 
         {isMenuShow && (
           <div className="flex justify-center items-center gap-4">
-            <HouseIcon isMenuShow={isMenuShow} />
-            <AboutIcon isMenuShow={isMenuShow} />
-            <EducationIcon isMenuShow={isMenuShow} />
-            <SkillsIcon isMenuShow={isMenuShow} />
-            <ExperienceIcon isMenuShow={isMenuShow} />
-            <ProjectsIcon isMenuShow={isMenuShow} />
+            <div onClick={() => scrollIntoSection(0)}>
+              <HouseIcon isMenuShow={isMenuShow} />
+            </div>
+
+            <div onClick={() => scrollIntoSection(aboutPosition)}>
+              <AboutIcon isMenuShow={isMenuShow} />
+            </div>
+
+            <div onClick={() => scrollIntoSection(educationPosition)}>
+              <EducationIcon isMenuShow={isMenuShow} />
+            </div>
+
+            <div onClick={() => scrollIntoSection(skillsPosition)}>
+              <SkillsIcon isMenuShow={isMenuShow} />
+            </div>
+
+            <div onClick={() => scrollIntoSection(experiencePosition)}>
+              <ExperienceIcon isMenuShow={isMenuShow} />
+            </div>
+
+            <div onClick={() => scrollIntoSection(ProjectsPosition)}>
+              <ProjectsIcon isMenuShow={isMenuShow} />
+            </div>
           </div>
         )}
       </div>

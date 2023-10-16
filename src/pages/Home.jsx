@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./Header";
 import AboutMe from "./AboutMe";
 import Education from "./Education";
@@ -16,21 +16,16 @@ import {
 } from "../Icons";
 
 export default function Home() {
-  const [home, setHome] = useState(true);
-  const [about, setAbout] = useState(false);
-  const [education, setEducation] = useState(false);
-  const [skills, setSkills] = useState(false);
-  const [experience, setExperience] = useState(false);
-  const [projects, setProjects] = useState(false);
+  const [activer, setActiver] = useState({ home: true });
 
-  const [homePosition, setHomePosition] = useState("");
-  const [aboutPosition, setAboutPosition] = useState("");
-  const [educationPosition, setEducationPosition] = useState("");
-  const [skillsPosition, setSkillsPosition] = useState("");
-  const [experiencePosition, setExperiencePosition] = useState("");
-  const [ProjectsPosition, setProjectsPosition] = useState("");
+  const [homePosition, setHomePosition] = useState(0);
+  const [aboutPosition, setAboutPosition] = useState(0);
+  const [educationPosition, setEducationPosition] = useState(0);
+  const [skillsPosition, setSkillsPosition] = useState(0);
+  const [experiencePosition, setExperiencePosition] = useState(0);
+  const [ProjectsPosition, setProjectsPosition] = useState(0);
 
-  useEffect(() => {
+  const getItemsPosition = () => {
     const homescroll = document.querySelector("#Home")?.getBoundingClientRect();
     setHomePosition(homescroll.top);
 
@@ -43,7 +38,6 @@ export default function Home() {
       .querySelector("#Education")
       ?.getBoundingClientRect();
     setEducationPosition(educationscroll.top);
-
     const skillsscroll = document
       .querySelector("#Skills")
       ?.getBoundingClientRect();
@@ -58,7 +52,7 @@ export default function Home() {
       .querySelector("#Projects")
       ?.getBoundingClientRect();
     setProjectsPosition(projectsScroll.top);
-  }, []);
+  };
 
   const scrollIntoSection = (num) => {
     window.scrollTo({
@@ -67,24 +61,29 @@ export default function Home() {
     });
   };
 
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-
-    setHome(scrollY < aboutPosition);
-    setAbout(scrollY >= aboutPosition && scrollY < educationPosition);
-    setEducation(scrollY >= educationPosition && scrollY < skillsPosition);
-    setSkills(scrollY >= skillsPosition && scrollY < experiencePosition);
-    setExperience(scrollY >= experiencePosition && scrollY < ProjectsPosition);
-    setProjects(scrollY >= ProjectsPosition);
+  const setTrueEr = (name) => {
+    setActiver({ [name]: true });
   };
 
   useEffect(() => {
-    handleScroll();
-    document.addEventListener("scroll", handleScroll);
+    getItemsPosition();
+    document.addEventListener("scroll", () => {
+      const scroll = window.scrollY;
 
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
+      if (scroll === 0) {
+        setTrueEr("home");
+      } else if (scroll > 200 && scroll < 800) {
+        setTrueEr("about");
+      } else if (scroll > 800 && scroll < 1800) {
+        setTrueEr("education");
+      } else if (scroll > 1800 && scroll < 2800) {
+        setTrueEr("skills");
+      } else if (scroll > 2800 && scroll < 4500) {
+        setTrueEr("experience");
+      } else if (scroll > 4500) {
+        setTrueEr("projects");
+      }
+    });
   }, []);
 
   return (
@@ -124,60 +123,60 @@ export default function Home() {
           <div
             onClick={() => scrollIntoSection(0)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${
-              home ? "active" : ""
+              activer.home ? "active" : ""
             }`}
           >
-            <HouseIcon home={home} />
+            <HouseIcon home={activer.home} />
             <span className="w-20">Home</span>
           </div>
 
           <div
             onClick={() => scrollIntoSection(aboutPosition)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${
-              about ? "active zhome" : ""
+              activer.about ? "active zhome" : ""
             }`}
           >
-            <AboutIcon about={about} />
+            <AboutIcon about={activer.about} />
             <span className="w-20">About</span>
           </div>
 
           <div
             onClick={() => scrollIntoSection(educationPosition)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${
-              education ? "active" : ""
+              activer.education ? "active" : ""
             }`}
           >
-            <EducationIcon education={education} />
+            <EducationIcon education={activer.education} />
             <span className="w-20">Education</span>
           </div>
 
           <div
             onClick={() => scrollIntoSection(skillsPosition)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${
-              skills ? "active" : ""
+              activer.skills ? "active" : ""
             }`}
           >
-            <SkillsIcon skills={skills} />
+            <SkillsIcon skills={activer.skills} />
             <span className="w-20">Skills</span>
           </div>
 
           <div
             onClick={() => scrollIntoSection(experiencePosition)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${
-              experience ? "active" : ""
+              activer.experience ? "active" : ""
             }`}
           >
-            <ExperienceIcon experience={experience} />
+            <ExperienceIcon experience={activer.experience} />
             <span className="w-20">Experience</span>
           </div>
 
           <div
             onClick={() => scrollIntoSection(ProjectsPosition)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${
-              projects ? "active" : ""
+              activer.projects ? "active" : ""
             }`}
           >
-            <ProjectsIcon projects={projects} />
+            <ProjectsIcon projects={activer.projects} />
             <span className="w-20">Projects</span>
           </div>
         </div>
