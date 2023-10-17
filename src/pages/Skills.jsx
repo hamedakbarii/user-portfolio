@@ -9,7 +9,7 @@ export default function Skills() {
     >
       <h2 className="text-[#F2F1F9] font-semibold md:text-2xl">My Skills</h2>
 
-      <div className="w-full bg-[#086775] p-4 md:p-12 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-4 ">
+      <div className="w-full bg-[#086775] p-4 md:p-3 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-4 ">
         <SkillsItem
           Icon={"/images/skills/SkillsIcon1.png"}
           title={"Machine Learning"}
@@ -87,26 +87,34 @@ export default function Skills() {
 
       <div className="w-full bg-[#086775] p-6 rounded-xl flex flex-col justify-center items-start gap-6 ">
         <div className="gradient-background text-center py-1 px-10 rounded-lg">
-          <span className="text-white font-semibold text-xl">
+          <span className="text-white font-semibold text-2xl">
             Personal Qualities
           </span>
         </div>
 
-        <div className="bg-[#C1F6ED] p-4 rounded-lg flex flex-col justify-center items-center gap-3 text-sm font-semibold w-full text-justify">
-          +Proficient oral and written communication skills and fluent in
-          English.
-          <br />
-          +Highly motivated with problem solving skills and research-oriented
-          thinking.
-          <br />
-          +Analyzing situations critically and making decisions based on
-          complete information.
-          <br />
-          +Prioritizing tasks to ensure that work is done efficiently within set
-          deadlines.
-          <br />
-          +Efficiently working with others, both within teams and across
-          departments.
+        <div className="bg-[#C1F6ED] p-4 rounded-lg flex justify-center items-center  text-xl font-semibold w-full text-justify">
+          <div className="flex flex-col justify-center items-start gap-3">
+            <span>
+              +Proficient oral and written communication skills and fluent in
+              English.
+            </span>
+            <span>
+              +Highly motivated with problem solving skills and
+              research-oriented thinking.
+            </span>
+            <span>
+              +Analyzing situations critically and making decisions based on
+              complete information.
+            </span>
+            <span>
+              +Prioritizing tasks to ensure that work is done efficiently within
+              set deadlines.
+            </span>
+            <span>
+              +Efficiently working with others, both within teams and across
+              departments.
+            </span>
+          </div>
         </div>
       </div>
 

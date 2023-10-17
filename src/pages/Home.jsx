@@ -72,9 +72,9 @@ export default function Home() {
 
       if (scroll === 0) {
         setTrueEr("home");
-      } else if (scroll > 200 && scroll < 800) {
+      } else if (scroll > 200 && scroll < 900) {
         setTrueEr("about");
-      } else if (scroll > 800 && scroll < 1800) {
+      } else if (scroll > 900 && scroll < 1800) {
         setTrueEr("education");
       } else if (scroll > 1800 && scroll < 2800) {
         setTrueEr("skills");
@@ -89,9 +89,9 @@ export default function Home() {
   return (
     <div className="flex justify-center w-full h-full" id="Home">
       <div
-        className={`w-1/5 hidden md:flex flex-col justify-start items-start bg-[#02353C] pt-20 gap-10 h-screen fixed top-0 left-0 }`}
+        className={`w-1/5 hidden lg:flex flex-col justify-start items-center bg-[#02353C] pt-20 gap-10 h-screen fixed top-0 left-0 }`}
       >
-        <div className="w-full">
+        <div className="mr-10">
           <div className="flex justify-center items-center gap-3">
             <a href="mailto:Mstafazre@gmail.com">
               <img
@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-start items-start w-full gap-2">
+        <div className="flex flex-col justify-center items-center w-full gap-2 mr-10">
           <div
             onClick={() => scrollIntoSection(0)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${
@@ -182,7 +182,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="md:absolute top-0 right-0 md:w-10/12">
+      <div className="md:absolute top-0 right-0 lg:w-10/12">
         <Header />
         <AboutMe />
         <Education />

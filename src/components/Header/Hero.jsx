@@ -64,7 +64,7 @@ export default function Hero() {
           }}
         >
           <HeroFeature
-            Icon={"/images/header/hero/heroIcon1.png"}
+            Icon={"/images/header/hero/heroIcon1.svg"}
             title={"Research and Development"}
             desc={
               "Designing and developing machine learning algorithms tailored to renewable energy systems and energy storage solutions"
@@ -74,7 +74,7 @@ export default function Hero() {
             }
           />
           <HeroFeature
-            Icon={"/images/header/hero/heroIcon2.png"}
+            Icon={"/images/header/hero/heroIcon2.svg"}
             title={"Data Analytics"}
             desc={
               "Predictive analytics for renewable energy outputs Time series analysis for energy consumption and prediction"
@@ -84,7 +84,7 @@ export default function Hero() {
             }
           />
           <HeroFeature
-            Icon={"/images/header/hero/heroIcon3.png"}
+            Icon={"/images/header/hero/heroIcon3.svg"}
             title={"Simulation and Optimization"}
             desc={
               "Simulating thermal energy storage processes Optimizing battery thermal management for longevity and safety"

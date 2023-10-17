@@ -5,24 +5,22 @@ export default function EducationItem({ Icon, title, year, pos, desc }) {
     <div className="flex gap-4">
       <div className="flex flex-col justify-center items-center gap-1">
         <div className="w-2 h-2 rounded-full bg-[#57848A]"></div>
-        <div className="w-[3px] h-[550px] md:h-[315px] rounded-xl bg-[#57848A]"></div>
+        <div className="w-[3px] h-[300px] md:h-[200px] 2xl:h-[200px] rounded-xl bg-[#57848A]"></div>
       </div>
 
-      <div className="flex flex-col justify-start items-center md:w-[550px] mt-[-20px]">
+      <div className="flex flex-col justify-start items-center mt-[-20px]">
         <div className="flex justify-center items-start gap-2">
           <img src={Icon} alt="Icon" className="pt-2 w-[50px]" />
 
           <div className="flex flex-col justify-center items-start gap-4">
-            <div className="flex flex-col justify-center items-start md:w-[300px]">
+            <div className="flex flex-col justify-center items-start">
               <h2 className="text-[#FFFFFF] text-lg">{title}</h2>
               <span className="text-[#C1F6ED] text-[11px]">{year}</span>
               <span className="text-[#C1F6ED] text-[11px]">{pos}</span>
             </div>
 
-            <div>
-              <p className="text-[#FFFFFF] text-sm font-normal w-[200px] md:w-[500px] text-justify">
-                {desc}
-              </p>
+            <div className="text-[#FFFFFF] text-sm font-normal w-full xl:w-900px max-w-[1300px] text-justify">
+              {desc}
             </div>
           </div>
         </div>

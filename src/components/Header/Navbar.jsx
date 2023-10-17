@@ -60,7 +60,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`w-full bg-[#02353C] flex justify-between items-center p-3 md:hidden fixed top-0 z-10 
+      className={`w-full bg-[#02353C] flex justify-between items-center p-3 lg:hidden fixed top-0 z-10 
       
       `}
     >

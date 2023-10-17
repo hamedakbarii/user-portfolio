@@ -20,11 +20,11 @@ export default function Experience() {
           <div className="flex flex-col justify-center items-center gap-2">
             <img src="/images/experience/experienceIcon1.png" alt="Icon1" />
             <div className="w-2 h-2 rounded-full bg-[#57848A]"></div>
-            <div className="w-[3px] h-28 rounded-xl bg-[#57848A]"></div>
+            <div className="w-[3px] h-14 rounded-xl bg-[#57848A]"></div>
             <div className="w-2 h-2 rounded-full bg-[#57848A]"></div>
           </div>
 
-          <div className="flex flex-col justify-center items-start h-full w-full gap-20">
+          <div className="flex flex-col justify-center items-start h-full w-full gap-8">
             <div className="flex flex-col justify-center items-start pt-5">
               <h2 className="text-white font-semibold text-xl">Co-Founder</h2>
               <span className="text-[10px] text-[#C1F6ED]">
@@ -42,7 +42,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              <div className="text-white text-sm text-justify-last lg:w-[700px] md:w-[540px]">
+              <div className="text-white text-sm text-justify-last xl:w-full md:w-[540px]">
                 + Design and develop state-of-the-art object detection models to
                 identify and locate objects of interest within complex images{" "}
                 <br /> + Collaborated with a cross-functional team to integrate
@@ -69,7 +69,7 @@ export default function Experience() {
           <div className="flex justify-start items-start gap-5 w-full h-full ">
             <div className="flex flex-col justify-center items-center gap-2 pl-1.5 pt-3">
               <div className="w-2 h-2 rounded-full bg-[#57848A]"></div>
-              <div className="w-[3px] h-[340px] rounded-xl bg-[#57848A]"></div>
+              <div className="w-[3px] h-[180px] 2xl:h-[110px] rounded-xl bg-[#57848A]"></div>
             </div>
 
             <div className="flex flex-col justify-center items-start gap-4">
@@ -80,24 +80,25 @@ export default function Experience() {
                 </span>
               </div>
 
-              <p className="text-sm font-normal text-white text-justify lg:w-[700px] md:w-[540px]">
+              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px]">
                 + Modeling and Developing PVT Heat Pump Performance Predictive
-                Models + Two-Stage Data Generation Approaches for generating
-                premium-quality energy data + EV Battery Thermal Management : -
-                Developed machine learning models to predict battery temperature
-                dynamics in electric vehicles. - Developed anomaly detection
-                algorithms to identify thermal system faults and malfunctions. -
-                Spearheaded the development of a cutting-edge reinforcement
-                learning control system for EV battery thermal management. -
-                Leveraged reinforcement learning algorithms, including Proximal
-                Policy Optimization (PPO) and Deep Deterministic Policy Gradient
-                (DDPG), to optimize temperature regulation strategies.
+                Models <br /> + Two-Stage Data Generation Approaches for
+                generating premium-quality energy data <br /> + EV Battery
+                Thermal Management : - Developed machine learning models to
+                predict battery temperature dynamics in electric vehicles. -
+                Developed anomaly detection algorithms to identify thermal
+                system faults and malfunctions. - Spearheaded the development of
+                a cutting-edge reinforcement learning control system for EV
+                battery thermal management. - Leveraged reinforcement learning
+                algorithms, including Proximal Policy Optimization (PPO) and
+                Deep Deterministic Policy Gradient (DDPG), to optimize
+                temperature regulation strategies.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-start gap-6">
+        <div className="flex flex-col justify-center items-start gap-4">
           <div className="flex justify-center items-center gap-4">
             <img src="/images/experience/experienceIcon3.png" alt="Icon1" />
 
@@ -112,7 +113,7 @@ export default function Experience() {
           <div className="flex justify-start items-start gap-5 w-full h-full ">
             <div className="flex flex-col justify-center items-center gap-2 pl-1.5 pt-3">
               <div className="w-2 h-2 rounded-full bg-[#57848A]"></div>
-              <div className="w-[3px] h-[250px] rounded-xl bg-[#57848A]"></div>
+              <div className="w-[3px] h-[160px] rounded-xl bg-[#57848A]"></div>
             </div>
 
             <div className="flex flex-col justify-center items-start gap-4">
@@ -123,15 +124,16 @@ export default function Experience() {
                 </span>
               </div>
 
-              <p className="text-sm font-normal text-white text-justify lg:w-[700px] md:w-[540px]">
-                + Created and followed processes to keep data confidential +
-                Created visually compelling and insightful data visualizations
-                using custom Python scripts + Conducted statistical analysis to
-                uncover trends, patterns, and correlations within datasets +
-                Collaborated with cross-functional teams to transform data
-                insights into actionable business recommendations. + Predicted
-                customer churn, sales forecasts, and other key business metrics
-                with high accuracy
+              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px]">
+                + Created and followed processes to keep data confidential{" "}
+                <br /> + Created visually compelling and insightful data
+                visualizations using custom Python scripts <br /> + Conducted
+                statistical analysis to uncover trends, patterns, and
+                correlations within datasets <br /> + Collaborated with
+                cross-functional teams to transform data insights into
+                actionable business recommendations. <br /> + Predicted customer
+                churn, sales forecasts, and other key business metrics with high
+                accuracy
               </p>
             </div>
           </div>
@@ -152,7 +154,7 @@ export default function Experience() {
           <div className="flex justify-start items-start gap-5 w-full h-full ">
             <div className="flex flex-col justify-center items-center gap-2 pl-1.5 pt-3">
               <div className="w-2 h-2 rounded-full bg-[#57848A]"></div>
-              <div className="w-[3px] h-[250px] rounded-xl bg-[#57848A]"></div>
+              <div className="w-[3px] h-[150px] rounded-xl bg-[#57848A]"></div>
             </div>
 
             <div className="flex flex-col justify-center items-start gap-4">
@@ -163,15 +165,15 @@ export default function Experience() {
                 </span>
               </div>
 
-              <p className="text-sm font-normal text-white text-justify lg:w-[700px] md:w-[540px]">
+              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px]">
                 + Proficiently installed solar panels on residential and
                 commercial rooftops, ensuring optimal positioning for maximum
-                energy capture. + Expertly connected solar panels to inverters
-                and electrical systems, complying with local electrical codes
-                and safety standards + Configured monitoring systems to track
-                solar energy production and system performance + Generated
-                reports on system performance and presented findings to clients
-                and management
+                energy capture. <br /> + Expertly connected solar panels to
+                inverters and electrical systems, complying with local
+                electrical codes and safety standards <br /> + Configured
+                monitoring systems to track solar energy production and system
+                performance <br />+ Generated reports on system performance and
+                presented findings to clients and management
               </p>
             </div>
           </div>

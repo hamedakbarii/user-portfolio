@@ -15,7 +15,7 @@ export default function Education() {
           Education
         </span>
 
-        <div className="flex flex-col md:justify-center md:items-center w-full gap-8 sm:gap-1">
+        <div className="flex flex-col w-full sm:gap-1">
           <EducationItem
             Icon={"/images/education/desktop/educatioIcon2.png"}
             title={"K. N. Toosi University of Technology"}
