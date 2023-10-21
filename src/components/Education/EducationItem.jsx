@@ -19,7 +19,10 @@ export default function EducationItem({ Icon, title, year, pos, desc }) {
               <span className="text-[#C1F6ED] text-[11px]">{pos}</span>
             </div>
 
-            <div className="text-[#FFFFFF] text-sm font-normal w-full xl:w-900px max-w-[1300px] text-justify">
+            <div
+              className="text-[#FFFFFF] text-sm font-normal w-full xl:w-900px max-w-[1300px] text-justify xl:text-[17px]"
+              style={{ lineHeight: "25px" }}
+            >
               {desc}
             </div>
           </div>
