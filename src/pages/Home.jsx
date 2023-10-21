@@ -74,13 +74,13 @@ export default function Home() {
         setTrueEr("home");
       } else if (scroll > 200 && scroll < 900) {
         setTrueEr("about");
-      } else if (scroll > 900 && scroll < 1800) {
+      } else if (scroll > 900 && scroll < 1700) {
         setTrueEr("education");
-      } else if (scroll > 1800 && scroll < 2800) {
+      } else if (scroll > 1700 && scroll < 2800) {
         setTrueEr("skills");
-      } else if (scroll > 2800 && scroll < 4500) {
+      } else if (scroll > 2800 && scroll < 4300) {
         setTrueEr("experience");
-      } else if (scroll > 4500) {
+      } else if (scroll > 4300) {
         setTrueEr("projects");
       }
     });
@@ -119,7 +119,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center w-full gap-2 mr-10">
+        <div className="flex flex-col justify-center items-center w-full gap-2 mr-10 text-lg">
           <div
             onClick={() => scrollIntoSection(0)}
             className={`zz flex justify-center items-center gap-5 transition-all duration-300 font-semibold w-full p-3 text-white rounded-r-xl cursor-pointer ${

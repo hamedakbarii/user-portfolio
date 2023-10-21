@@ -42,7 +42,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              <div className="text-white text-sm text-justify-last xl:w-full md:w-[540px]">
+              <div className="text-white text-sm text-justify-last xl:w-full md:w-[540px] xl:text-lg">
                 + Design and develop state-of-the-art object detection models to
                 identify and locate objects of interest within complex images{" "}
                 <br /> + Collaborated with a cross-functional team to integrate
@@ -80,7 +80,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px]">
+              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px] xl:text-lg">
                 + Modeling and Developing PVT Heat Pump Performance Predictive
                 Models <br /> + Two-Stage Data Generation Approaches for
                 generating premium-quality energy data <br /> + EV Battery
@@ -118,13 +118,13 @@ export default function Experience() {
 
             <div className="flex flex-col justify-center items-start gap-4">
               <div className="flex flex-col justify-center items-start ">
-                <h2 className="text-white text-2xl">Data Analsty </h2>
+                <h2 className="text-white text-2xl">Data Analyst </h2>
                 <span className="text-[#C1F6ED] text-[10px]">
                   Oct 2019 - Oct 2021
                 </span>
               </div>
 
-              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px]">
+              <p className="text-sm xl:text-lg font-normal text-white text-justify xl:w-full md:w-[540px]">
                 + Created and followed processes to keep data confidential{" "}
                 <br /> + Created visually compelling and insightful data
                 visualizations using custom Python scripts <br /> + Conducted
@@ -165,7 +165,7 @@ export default function Experience() {
                 </span>
               </div>
 
-              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px]">
+              <p className="text-sm font-normal text-white text-justify xl:w-full md:w-[540px] xl:text-lg">
                 + Proficiently installed solar panels on residential and
                 commercial rooftops, ensuring optimal positioning for maximum
                 energy capture. <br /> + Expertly connected solar panels to

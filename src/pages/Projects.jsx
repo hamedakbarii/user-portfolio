@@ -21,7 +21,7 @@ export default function Projects() {
           </span>
         </div>
 
-        <p className="text-white text-[10px] md:text-[14px] text-justify">
+        <p className="text-white text-[10px] md:text-sm xl:text-lg text-justify">
           An advanced classification unit was engineered to categorize dried
           fruits by analyzing their standard RGB color profiles. The
           establishment of this standard RGB range involved the utilization of a
@@ -35,7 +35,7 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <ProjectItem
-              src={"/images/projects/projectImg1.png"}
+              src={"/images/projects/projectImg1.jpg"}
               text={
                 "Adjusting the RGB range, regulating fan speed, switching fruits, and altering the travel belt speed"
               }
@@ -44,7 +44,7 @@ export default function Projects() {
 
           <div>
             <ProjectItem
-              src={"/images/projects/projectImg2.png"}
+              src={"/images/projects/projectImg2.jpg"}
               text={"Overall architecture of the classification unit."}
             />
           </div>
